@@ -36,7 +36,7 @@ cacheSolve <- function(x, ...) {
         return(inv)
     }
     data <- x$get()
-    inv <- solve(data, ...)
+    inv <- solve(data) # Solve will get the inverse automatically if presented with 1 arg
     x$setinverse(inv)
     inv
 }
